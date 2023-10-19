@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" class="{{bg_class}}">
+<head>
+    <meta charset="UTF-8">
+    <title>Career Fair Report</title>
+    <style>
+        .classy {
+           min-height: 100%;
+           background-image: url(/static/cc_bg.jpeg);
+           background-size: cover;
+           background-repeat: no-repeat;
+           background-position: center center;
+           backdrop-filter: blur(8px);
+        }
+        .content {
+           max-width: 1000px;
+           margin-left: 550px;
+           margin-right: auto;
+           margin-top: 580px;
+        }
+        input::file-selector-button{
+            background-image: linear-gradient(
+            to right,
+            #ff7a18,
+            #af002d,
+            #319197 100%,
+            #319197 200%
+          );
+              background-position-x: 0%;
+              background-size: 200%;
+              border: 0;
+              border-radius: 8px;
+              color: #fff;
+              padding: 1rem 1.25rem;
+              text-shadow: 0 1px 1px #333;
+              transition: all 0.25s;
+        }
+          input::file-selector-button:hover {
+            background-position-x: 100%;
+            transform: scale(1.1);
+        }
+
+        input[type=file]{
+          border: none;
+          color: Beige;
+          padding: 16px 32px;
+          text-decoration: none;
+          margin: 4px 2px;
+          cursor: pointer;
+          font-size: 30px;
+        }
+        input[type=submit]{
+        background-image: linear-gradient(
+        to right,
+        #ff7a18,
+        #af002d,
+        #319197 100%,
+        #319197 200%
+        );
+          margin-left: 35px;
+          font-size:30px;
+          background-position-x: 0%;
+          background-size: 200%;
+          border: 0;
+          border-radius: 8px;
+          color: #fff;
+          padding: 1rem 1.25rem;
+          text-shadow: 0 1px 1px #333;
+          transition: all 0.25s;}
+         input[type=submit]:hover{
+            background-position-x: 100%;
+            transform: scale(1.1);
+         }
+
+
+    </style>
+</head>
+<body class="content">
+    <h1 style="font-size: 45px; color:Beige">Upload the Original File(.csv)</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="uploaded_file" accept=".csv" required/>
+        <br>
+        <br>
+        <input type="submit" value="Download the Report">
+    </form>
+
+</body>
+</html>
